@@ -24,22 +24,24 @@ int trungbinhcong(int a[], int n){
 	printf("\ntbc la:%.2f",tbc);
 }
 int max(int a[], int n){
-	int s;
+	int max=0;
 	for(int i=0; i<n; i++){
-		if(s>a[i]){
-			s=a[i];
+		if(max<a[i]){
+			max=a[i];
 		}
 	}
-	printf("\ngia tri lon nhat la:%d",s);
+	printf("\ngia tri lon nhat la:%d",max);
+	return max;
 }
 int min(int a[], int n){
-	int s;
+	int min;
 	for(int i=0; i<n; i++){
-		if(s<a[i]){
-			s=a[i];
+		if(min>a[i]){
+			min=a[i];
 		}
 	}
-	printf("\ngia tri nho nhat la:%d",s);
+	printf("\ngia tri nho nhat la:%d",min);
+	return min;
 }
 int thongkesochan(int a[], int n){
 	int s[100];
@@ -48,7 +50,7 @@ int thongkesochan(int a[], int n){
 	scanf("%d",&x);
 	printf("\ncac so chan nho hon x la:");
 	for(int i=0; i<n; i++){
-		if(a[i]<x){
+		if(a[i]>0 && a[i]<x){
 		if(a[i]%2==0){
 			s[i]=a[i];
 			printf("\t%d",s[i]);
@@ -57,6 +59,7 @@ int thongkesochan(int a[], int n){
     	}
 	}
 	printf("\nso chan nho hon x la %d",dem);
+	return dem;
 }
 int main(){
 	int a[100],n;
