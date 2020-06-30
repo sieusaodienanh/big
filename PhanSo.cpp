@@ -35,7 +35,7 @@ int main()
 }
 void nhapPhanSo(PhanSo *phanso)
 {
-    // nh?p t? và m?u
+    // nh?p t? vÅ• m?u
     printf("Tu so: ");
     scanf("%d", &phanso->tu);
     printf("Mau so: ");
@@ -50,17 +50,17 @@ void nhapPhanSo(PhanSo *phanso1, PhanSo *phanso2)
 }
 void xuatPhanSo(PhanSo *phanso)
 {
-    // rút g?n phân s?
+    // rÃºt g?n phÃ¢n s?
     rutGonPhanSo(phanso);
     doidauPS(phanso);
-    // in phân s?
+    // in phÃ¢n s?
     printf("\n%d/%d", phanso->tu, phanso->mau);
 }
 void rutGonPhanSo(PhanSo *phanso) 
 {
-    // B1: tìm u?c chung l?n nh?t c?a t? và m?u
+    // B1: tÄ›m u?c chung l?n nh?t c?a t? vÅ• m?u
     int uocchunglonnhat = uocChungLonNhat(phanso->tu, phanso->mau);
-    // B2: rút g?n phân s?
+    // B2: rÃºt g?n phÃ¢n s?
     phanso->tu = phanso->tu / uocchunglonnhat;
     phanso->mau = phanso->mau / uocchunglonnhat;
 }
@@ -131,7 +131,8 @@ void xuatThuongPhanSo(PhanSo *phanso1, PhanSo *phanso2)
 }
 void doidauPS(PhanSo *phanso)
 {
-	if(phanso < 0){
+	if(phanso < 0)
+	{
 		phanso->tu = -(phanso->tu);
 		phanso->mau = -(phanso->mau);
 	}
